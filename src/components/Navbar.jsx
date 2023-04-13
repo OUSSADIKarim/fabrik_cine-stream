@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.theme)
@@ -30,11 +30,11 @@ const Navbar = () => {
   }
 
   return (
-    <header className="sticky top-0 w-[100%] p-4 z-10 bg-neutral-0-400 dark:bg-primary transition-colors duration-300">
+    <header className="sticky top-0 w-[100%] p-4 bg-neutral-0-400 dark:bg-primary transition-colors duration-300 z-50">
       <div className="max-w-5xl m-auto flex align-middle justify-between">
         <Link
           to="/"
-          className=" text-2xl text-center hover:scale-110 transition-all duration-300"
+          className="relative text-2xl text-center hover:scale-110 transition-all duration-300"
         >
           <span className="text-secondary font-bold">Cine</span>
           <span className="dark:text-neutral-0-400 transition-colors duration-300">
@@ -46,7 +46,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="flex flex-col align-middle justify-center hover:scale-125 transition-all duration-300"
+                className="relative flex flex-col align-middle justify-center hover:scale-125 transition-all duration-300"
               >
                 <svg
                   width="20"
@@ -66,7 +66,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/discover"
-                className="flex flex-col align-middle justify-center hover:scale-125 transition-all duration-300"
+                className="relative flex flex-col align-middle justify-center hover:scale-125 transition-all duration-300"
               >
                 <svg
                   width="19"
@@ -107,20 +107,20 @@ const Navbar = () => {
         <nav className="hidden md:visible w-1/4 md:flex flex-col align-middle justify-center">
           <ul className="flex align-middle justify-between">
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="flex flex-col align-middle justify-center dark:text-secondary hover:scale-125 transition-all duration-300"
+                className="relative flex flex-col align-middle justify-center dark:text-secondary hover:scale-125 transition-all duration-300"
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/discover"
-                className="flex flex-col align-middle justify-center dark:text-secondary hover:scale-125 transition-all duration-300"
+                className="relative flex flex-col align-middle justify-center dark:text-secondary hover:scale-125 transition-all duration-300"
               >
-                Search
-              </Link>
+                Discover
+              </NavLink>
             </li>
             <li
               className="cursor-pointer hover:scale-125 transition-all duration-300"

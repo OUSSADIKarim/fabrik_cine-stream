@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  @apply before:content-[""] before:absolute before:w-full before:h-[2px] before:rounded-xl before:bottom-[-2px] before:bg-secondary;
+}
+
+body {
+  height: inherit;
+}
+
+#root {
+  height: inherit;
+}
+
+.splide__arrows svg {
+  fill: #bd71e0;
+}
